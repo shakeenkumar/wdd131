@@ -1,0 +1,64 @@
+/* Reset some basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f8ff;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #003366;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 0.5em;
+}
+
+nav a {
+    color: #ffcc00;
+    margin: 0 1em;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+/* Main Content */
+main {
+    display: flex;
+    justify-content: space-around;
+    padding: 2em;
+}
+
+section {
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #003366;
+    color: #fff;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 0.5em 0;
+}
