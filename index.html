@@ -3,54 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131: Dynamic Web Fundamentals - Shakeen Kumar</title>
+    <title>Shakeen Kumar's Web Page</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <h1>WDD 131: Dynamic Web Fundamentals - <span>Shakeen Kumar</span></h1>
-        <nav>
-            <a href="#">LinkedIn</a>
-            <a href="#">I-Learn</a>
-            <a href="#">Scripture</a>
-            <a href="#">Final Project</a>
-        </nav>
-    </header>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#linkedin">LinkedIn</a></li>
+            <li><a href="#ilearn">I-Learn</a></li>
+            <li><a href="#scripture">Scripture</a></li>
+            <li><a href="#project">Final Project</a></li>
+        </ul>
+    </nav>
 
     <!-- Main Content -->
     <main>
         <!-- About Me Section -->
-        <section class="about-me">
+        <section id="about-me">
             <h2>About Me</h2>
-            <div class="content">
-                <p>My name is Shakeen Kumar, and I’m from Andhra Pradesh, located in the southern part of India. I enjoy web development and am excited to learn new things. I love exploring technology and sharing my knowledge with others.</p>
-                <img src="images/my-photo.jpg" alt="Photo of Shakeen Kumar">
+            <div class="about-container">
+                <p>My name is Shakeen Kumar. I am from Andhra Pradesh, India. I currently work as a web developer and enjoy learning new things. I love to travel and explore new cultures.</p>
+                <img src="images/shakeen.jpg" alt="Shakeen Kumar">
             </div>
-            <h3>Andhra Pradesh, India</h3>
-            <div class="location-content">
-                <img src="images/india.jpg" alt="India">
-                <p>Andhra Pradesh is known for its rich culture, history, and cuisine. It is one of India's beautiful states, located on the southeastern coast. The state is famous for its beautiful beaches, temples, and spicy food.</p>
+        </section>
+
+        <!-- Location Section -->
+        <section id="location">
+            <h2>Andhra Pradesh, India</h2>
+            <div class="location-container">
+                <img src="images/india-flag.png" alt="Official Flag of India">
+                <p>Andhra Pradesh is located in the southern part of India. It is known for its rich culture, history, and beautiful landscapes.</p>
             </div>
         </section>
 
         <!-- Web Dev Resources Section -->
-        <section class="resources">
+        <section id="resources">
             <h2>Web Dev Resources</h2>
             <ul>
-                <li><a href="#">Dev.to Community</a></li>
-                <li><a href="#">Smashing Magazine</a></li>
-                <li><a href="#">CSS Tricks</a></li>
-                <li><a href="#">W3 Schools</a></li>
-                <li><a href="#">Udemy</a></li>
-                <li><a href="#">Lorem Picsum Image Placeholder</a></li>
+                <li><a href="https://dev.to" target="_blank">Dev.to Community</a></li>
+                <li><a href="https://www.smashingmagazine.com/" target="_blank">Smashing Magazine</a></li>
+                <li><a href="https://css-tricks.com/" target="_blank">CSS Tricks</a></li>
+                <li><a href="https://www.w3schools.com/" target="_blank">W3 Schools</a></li>
+                <li><a href="https://www.udemy.com/" target="_blank">Udemy</a></li>
+                <li><a href="https://picsum.photos/" target="_blank">Lorem Picsum Image Placeholder</a></li>
             </ul>
         </section>
     </main>
 
-    <!-- Footer Section -->
+    <!-- Footer -->
     <footer>
-        <p>&copy;2024 🌸 Shakeen Kumar 🌸 Andhra Pradesh, India</p>
+        <p>&copy; <span id="current-year"></span> 🌸 Shakeen Kumar 🌸 Andhra Pradesh, India</p>
         <p>Last Modification: <span id="last-modified"></span></p>
     </footer>
 
