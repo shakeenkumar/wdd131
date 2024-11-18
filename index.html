@@ -3,57 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131: Dynamic Web Fundamentals - Shakeen Kumar</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Personal Page</title>
+    <link rel="stylesheet" href="base.css">
+    <script src="getdates.js" defer></script>
 </head>
 <body>
-    <!-- Header Section -->
+
     <header>
-        <h1>WDD 131: Dynamic Web Fundamentals - <span>Shakeen Kumar</span></h1>
+        <h1>Welcome to My Personal Webpage</h1>
         <nav>
-            <a href="#">LinkedIn</a>
-            <a href="#">I-Learn</a>
-            <a href="#">Scripture</a>
-            <a href="#">Final Project</a>
+            <ul>
+                <li><a href="https://www.linkedin.com">LinkedIn</a></li>
+                <li><a href="https://byui.instructure.com/">I-Learn</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures">Favorite Scripture</a></li>
+                <li><a href="#">Final Project</a></li>
+            </ul>
         </nav>
     </header>
 
-    <!-- Main Content -->
     <main>
-        <!-- About Me Section -->
-        <section class="about-me">
+        <section class="card">
             <h2>About Me</h2>
-            <div class="content">
-                <p>My name is Shakeen Kumar, and I’m from Andhra Pradesh, located in the southern part of India. I enjoy web development and am excited to learn new things. I love exploring technology and sharing my knowledge with others.</p>
-                <img src="images/my-photo.jpg" alt="Photo of Shakeen Kumar">
-            </div>
-            <h3>Andhra Pradesh, India</h3>
-            <div class="location-content">
-                <img src="images/india.jpg" alt="India flag">
-                <p>Andhra Pradesh is known for its rich culture, history, and cuisine. It is one of India's beautiful states, located on the southeastern coast. The state is famous for its beautiful beaches, temples, and spicy food.</p>
-            </div>
+            <p>My name is Shakeen Kumar, I am 23 years old. I completed my Pathway program in 2020, and now I am doing my graduation in Software Development at BYUI.</p>
         </section>
 
-        <!-- Web Dev Resources Section -->
-        <section class="resources">
-            <h2>Web Dev Resources</h2>
-            <ul>
-                <li><a href="#">Dev.to Community</a></li>
-                <li><a href="#">Smashing Magazine</a></li>
-                <li><a href="#">CSS Tricks</a></li>
-                <li><a href="#">W3 Schools</a></li>
-                <li><a href="#">Udemy</a></li>
-                <li><a href="#">Lorem Picsum Image Placeholder</a></li>
-            </ul>
+        <section class="card">
+            <h2>About My Place</h2>
+            <p>I am from Rajahmundry, Andhra Pradesh, India. I love my city because it is peaceful, has a rich food resource, and makes living easy for everyone.</p>
+            <img src="images/myimage.jpg" alt="Rajahmundry Image" />
         </section>
     </main>
 
-    <!-- Footer Section -->
     <footer>
-        <p>&copy;2024 🌸 Shakeen Kumar 🌸 Andhra Pradesh, India</p>
-        <p>Last Modification: <span id="last-modified"></span></p>
+        <p>&copy; <span id="currentyear"></span> Shakeen Kumar, India</p>
+        <p id="lastModified"></p>
     </footer>
 
-    <script src="js/script.js"></script>
 </body>
 </html>
