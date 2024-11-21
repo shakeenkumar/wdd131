@@ -1,44 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Personal Page</title>
-    <link rel="stylesheet" href="base.css">
-    <script src="getdates.js" defer></script>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals. Learn about Rubia M. Francesco, including web development resources, biography, and projects.">
+    <meta name="author" content="Rubia M. Francesco">
+    
+    <!-- Title -->
+    <title>WDD 131 - Dynamic Web Fundamentals - Rubia M. Francesco</title>
 </head>
 <body>
-
+    <!-- Header Section -->
     <header>
-        <h1>Welcome to My Personal Webpage</h1>
+        <h1>WDD 131: Dynamic Web Fundamentals - <span>Rubia M. Francesco</span></h1>
         <nav>
-            <ul>
-                <li><a href="https://www.linkedin.com">LinkedIn</a></li>
-                <li><a href="https://byui.instructure.com/">I-Learn</a></li>
-                <li><a href="https://www.churchofjesuschrist.org/study/scriptures">Favorite Scripture</a></li>
-                <li><a href="#">Final Project</a></li>
-            </ul>
+            <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+            <a href="https://byui.instructure.com/" target="_blank">I-Learn</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7" target="_blank">Scripture</a>
+            <a href="#" target="_blank">Final Project</a>
         </nav>
     </header>
 
+    <!-- Main Section -->
     <main>
+        <!-- About Me Card -->
         <section class="card">
             <h2>About Me</h2>
-            <p>My name is Shakeen Kumar, I am 23 years old. I completed my Pathway program in 2020, and now I am doing my graduation in Software Development at BYUI.</p>
+            <img src="images/profile.jpg" alt="Photo of Rubia" class="profile-photo">
+            <p>My name is Rubia, and I go by Ruby. I was born in South Africa and live with my family in Madagascar. I am currently working as an administrative legal assistant at a law firm. My children are my world, and I love spending time with them. I love to travel and learn new things.</p>
         </section>
 
+        <!-- Madagascar Card -->
         <section class="card">
-            <h2>About My Place</h2>
-            <p>I am from Rajahmundry, Andhra Pradesh, India. I love my city because it is peaceful, has a rich food resource, and makes living easy for everyone.</p>
-            <img src="images/myimage.jpg" alt="Rajahmundry Image" />
+            <h2>Toloria, Madagascar</h2>
+            <img src="images/madagascar-flag.png" alt="Official Flag of Madagascar" class="flag">
+            <p>Madagascar is the 4th largest island in the world and is located in the Indian Ocean. It is home to 5% of the world's plant and animal species, of which more than 80% are endemic to Madagascar. The island is best known for its lemurs, baobab trees, and vanilla.</p>
+        </section>
+
+        <!-- Web Dev Resources -->
+        <section id="resources" class="card">
+            <h2>Web Dev Resources</h2>
+            <ul>
+                <li><a href="https://dev.to/" target="_blank">Dev.to Community</a></li>
+                <li><a href="https://www.smashingmagazine.com/" target="_blank">Smashing Magazine</a></li> 
+                <li><a href="https://css-tricks.com/" target="_blank">CSS Tricks</a></li>
+                <li><a href="https://www.w3schools.com/" target="_blank">W3 Schools</a></li>
+                <li><a href="https://www.udemy.com/" target="_blank">Udemy</a></li>
+                <li><a href="https://picsum.photos/" target="_blank">Lorem Picsum Image Placeholder</a></li>
+            </ul>
         </section>
     </main>
 
+    <!-- Footer Section -->
     <footer>
-        <p>&copy; <span id="currentyear"></span> Shakeen Kumar, India</p>
+        <p>© <span id="currentyear"></span> Rubia Magdalena Francesco 🌸 Madagascar</p>
         <p id="lastModified"></p>
     </footer>
 
+    <!-- Link to External JavaScript -->
+    <script src="scripts/getdates.js"></script>
 </body>
 </html>
