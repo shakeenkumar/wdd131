@@ -1,196 +1,95 @@
-/* General Styles */
+/* Base styles for the webpage */
 body {
-    font-family: 'Arial', sans-serif; /* More modern font */
-    background-color: #f5f5f5;  /* Light grey background for a clean look */
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    color: #333; /* Text color for better readability */
+    background-color: #f4f4f4;
 }
 
-h1, h2 {
-    color: #2e3a59;  /* Darker shade for headings */
-    margin: 0;
-}
-
-a {
-    text-decoration: none;
-    color: #2e3a59;
-}
-
-a:hover {
-    color: #ff6f00;  /* Subtle orange highlight on hover */
-}
-
-/* Header Styling */
 header {
-    background-color: #3c4a69;  /* Rich dark blue */
+    background-color: #2d3e50;
     color: white;
-    padding: 30px 0;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 1.5em;
 }
 
 header h1 {
-    font-size: 3em;
-    font-weight: 700;
-    margin-bottom: 10px;
+    font-size: 2.5em;
 }
 
-/* Navigation */
 nav ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
-    margin: 20px 0 0;
 }
 
 nav ul li {
-    display: inline-block;
-    margin-right: 25px;
+    display: inline;
+    margin: 0 15px;
 }
 
 nav ul li a {
-    font-size: 1.2em;
-    font-weight: 600;
     color: white;
-    transition: color 0.3s ease;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 nav ul li a:hover {
-    color: #ff6f00; /* Bright orange on hover */
+    color: #ffbb33;
 }
 
-/* Main Content Layout */
 main {
     display: flex;
     justify-content: space-between;
-    gap: 30px;
-    padding: 50px 20px;
+    padding: 2em;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .card {
-    background-color: #ffffff;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    width: 48%;  /* Two cards per row */
-    transition: transform 0.3s ease-in-out;
-}
-
-.card:hover {
-    transform: translateY(-10px);  /* Subtle lift effect on hover */
-}
-
-.card h2 {
-    font-size: 1.6em;
-    margin-bottom: 15px;
-    font-weight: 600;
-}
-
-.card p {
-    font-size: 1.1em;
-    line-height: 1.7;
-    color: #555;
-}
-
-/* About Me Section */
-.about-me {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.about-me img {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    object-fit: cover;
+    padding: 1.5em;
+    background-color: #fff;
+    border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2em;
+    flex: 1;
 }
 
-/* City Info Section */
+h2 {
+    color: #2d3e50;
+}
+
+.about-me img, .city-info img {
+    max-width: 200px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.profile-img {
+    max-width: 150px;
+}
+
 .city-info {
     display: flex;
     align-items: center;
-    gap: 20px;
 }
 
-.city-info img {
-    width: 250px;
-    height: 150px;
-    border-radius: 8px;
-    object-fit: cover;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-/* Sidebar Styling */
 aside {
     width: 300px;
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 20px;
+    margin-left: 2em;
 }
 
-aside h2 {
-    font-size: 1.5em;
-    font-weight: 600;
-    margin-bottom: 20px;
+aside .card {
+    margin-bottom: 0;
 }
 
-aside ul {
-    list-style: none;
-    padding: 0;
-}
-
-aside ul li {
-    margin-bottom: 10px;
-}
-
-aside ul li a {
-    font-size: 1.1em;
-    color: #2e3a59;
-}
-
-aside ul li a:hover {
-    color: #ff6f00;
-}
-
-/* Footer Styling */
 footer {
-    background-color: #3c4a69;
+    background-color: #2d3e50;
     color: white;
     text-align: center;
-    padding: 25px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
-    margin-top: 40px;
+    padding: 1em;
+    margin-top: 2em;
 }
 
 footer p {
-    margin: 0;
-    font-size: 1.1em;
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    main {
-        flex-direction: column;
-        padding: 20px;
-    }
-
-    .card {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    aside {
-        width: 100%;
-        margin-top: 20px;
-    }
+    margin: 0.5em 0;
 }
