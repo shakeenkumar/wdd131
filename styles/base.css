@@ -1,95 +1,185 @@
-/* Base styles for the webpage */
+/* General Styles */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f0f8ff;  /* Light blue background for a fresh look */
+    color: #333;
 }
 
+h1, h2 {
+    font-family: 'Open Sans', sans-serif;
+    color: #2d3e50;  /* Dark blue color for headings */
+}
+
+a {
+    text-decoration: none;
+    color: #2d3e50;
+}
+
+a:hover {
+    color: #ff6600;  /* Orange color on hover */
+}
+
+/* Header Styles */
 header {
-    background-color: #2d3e50;
+    background-color: #3b4a60;  /* Dark header background */
     color: white;
+    padding: 20px;
     text-align: center;
-    padding: 1.5em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
     font-size: 2.5em;
+    margin: 0;
 }
 
 nav ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
+    margin-top: 15px;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    display: inline-block;
+    margin-right: 20px;
 }
 
 nav ul li a {
-    color: white;
-    text-decoration: none;
     font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #ffbb33;
+    color: #ff6600;  /* Highlight links on hover */
 }
 
+/* Main Content Layout */
 main {
     display: flex;
     justify-content: space-between;
-    padding: 2em;
+    gap: 30px;
+    padding: 40px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
+/* Card Styling for Each Section */
 .card {
-    padding: 1.5em;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2em;
-    flex: 1;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 48%;  /* 2 cards per row with space in between */
 }
 
-h2 {
-    color: #2d3e50;
+.card h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
 }
 
-.about-me img, .city-info img {
-    max-width: 200px;
-    border-radius: 10px;
-    margin-right: 20px;
+.card p {
+    line-height: 1.6;
+    font-size: 1.1em;
 }
 
-.profile-img {
-    max-width: 150px;
+/* About Me Section */
+.about-me {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
+.about-me img {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* City Info Section */
 .city-info {
     display: flex;
     align-items: center;
+    gap: 20px;
 }
 
+.city-info img {
+    width: 200px;
+    height: 120px;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar Styling */
 aside {
-    width: 300px;
-    margin-left: 2em;
+    width: 280px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 20px;
 }
 
-aside .card {
-    margin-bottom: 0;
+aside h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
 }
 
+aside ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+aside ul li {
+    margin-bottom: 10px;
+}
+
+aside ul li a {
+    font-size: 1.1em;
+    color: #2d3e50;
+}
+
+aside ul li a:hover {
+    color: #ff6600;
+}
+
+/* Footer Styling */
 footer {
-    background-color: #2d3e50;
+    background-color: #3b4a60;
     color: white;
     text-align: center;
-    padding: 1em;
-    margin-top: 2em;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
 }
 
 footer p {
-    margin: 0.5em 0;
+    margin: 5px 0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    main {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    aside {
+        width: 100%;
+        margin-top: 20px;
+    }
 }
