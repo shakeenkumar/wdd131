@@ -4,26 +4,33 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    color: #333;
 }
 
+/* Header Styling */
 header {
-    background-color: #2d3e50;
+    background-color: #4A90E2; /* Light blue header */
     color: white;
     text-align: center;
-    padding: 1.5em;
+    padding: 2em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
 }
 
 header h1 {
-    font-size: 2.5em;
+    font-size: 2.8em;  /* Larger font for the title */
+    margin: 0;
 }
 
+/* Navigation Styling */
 nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
+    text-align: center;
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block;
     margin: 0 15px;
 }
 
@@ -31,14 +38,17 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease; /* Smooth hover effect */
 }
 
 nav ul li a:hover {
-    color: #ffbb33;
+    color: #ffbb33; /* Gold hover color */
 }
 
+/* Main content styling */
 main {
     display: flex;
+    flex-wrap: wrap; /* Ensures responsiveness */
     justify-content: space-between;
     padding: 2em;
     max-width: 1200px;
@@ -52,12 +62,16 @@ main {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 2em;
     flex: 1;
+    margin-right: 2em;
+    min-width: 280px; /* Ensures cards are not too small on smaller screens */
 }
 
 h2 {
     color: #2d3e50;
+    font-size: 2em;
 }
 
+/* About Me and City Info Styling */
 .about-me img, .city-info img {
     max-width: 200px;
     border-radius: 10px;
@@ -68,28 +82,56 @@ h2 {
     max-width: 150px;
 }
 
+/* Flexbox for city info */
 .city-info {
     display: flex;
     align-items: center;
 }
 
+.city-info p {
+    font-size: 1.2em;
+}
+
+/* Sidebar for resources */
 aside {
     width: 300px;
     margin-left: 2em;
+    flex-shrink: 0;
 }
 
 aside .card {
     margin-bottom: 0;
 }
 
+/* Footer Styling */
 footer {
     background-color: #2d3e50;
     color: white;
     text-align: center;
-    padding: 1em;
+    padding: 1.5em;
     margin-top: 2em;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Inverted shadow for footer */
 }
 
 footer p {
     margin: 0.5em 0;
+}
+
+/* Responsiveness - for small screens */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column; /* Stacks the cards vertically on small screens */
+        align-items: center;
+    }
+
+    .card {
+        margin-right: 0;
+        width: 90%; /* Makes cards fill most of the width */
+    }
+
+    aside {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 2em;
+    }
 }
