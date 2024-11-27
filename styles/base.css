@@ -1,0 +1,95 @@
+/* Base styles for the webpage */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #2d3e50;
+    color: white;
+    text-align: center;
+    padding: 1.5em;
+}
+
+header h1 {
+    font-size: 2.5em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ffbb33;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    padding: 1.5em;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2em;
+    flex: 1;
+}
+
+h2 {
+    color: #2d3e50;
+}
+
+.about-me img, .city-info img {
+    max-width: 200px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.profile-img {
+    max-width: 150px;
+}
+
+.city-info {
+    display: flex;
+    align-items: center;
+}
+
+aside {
+    width: 300px;
+    margin-left: 2em;
+}
+
+aside .card {
+    margin-bottom: 0;
+}
+
+footer {
+    background-color: #2d3e50;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    margin-top: 2em;
+}
+
+footer p {
+    margin: 0.5em 0;
+}
