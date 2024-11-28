@@ -1,77 +1,16 @@
-/* CSS Variables for easier maintainability */
-:root {
-    --primary-color: #4CAF50;
-    --secondary-color: #fff;
-    --font-family: 'Arial', sans-serif;
-}
+/* temples-large.css */
 
-/* General styles for larger view */
-body {
-    font-family: var(--font-family);
-    margin: 0;
-    padding: 0;
-}
-
-/* Navigation Bar for larger view */
-nav {
-    display: flex;
-    justify-content: space-between; /* Space out the menu items */
-    align-items: center;
-    padding: 15px 30px;
-    background-color: #4CAF50; /* Matching the primary color */
-}
-
-nav a {
-    color: var(--secondary-color);
-    text-decoration: none;
-    font-size: 20px;
-    margin: 0 15px;
-}
-
-nav a:hover {
-    color: #4CAF50;
-    background-color: #fff;
-    border-radius: 5px;
-    padding: 5px;
-}
-
-/* Main content layout for larger screens - 3 columns per row */
-main {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Ensure 3 columns per row */
-    gap: 20px;
-    padding: 20px;
-    justify-items: center; /* Center the images */
-}
-
-/* Images inside main - better responsiveness */
-main img {
-    max-width: 100%; /* Ensure images don't overflow */
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Footer for larger view */
-footer {
-    text-align: center;
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    font-size: 14px;
-}
-
-footer p {
-    margin: 0;
-}
-
-/* Media Query for larger screens */
+/* Adjust grid for larger screens */
 @media screen and (min-width: 768px) {
-    main {
-        grid-template-columns: repeat(3, 1fr); /* Explicitly 3 images per row */
+    .temple-images {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on larger screens */
     }
 
-    nav {
-        justify-content: space-between; /* Spread out navigation items */
+    #nav-menu ul {
+        display: block;
+    }
+
+    #hamburger-menu {
+        display: none;
     }
 }
