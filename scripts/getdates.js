@@ -1,7 +1,5 @@
-// This script dynamically updates the copyright year and last modified date in the footer.
-
-// Set current year
+// Dynamically set the copyright year in the footer
 document.getElementById("currentyear").textContent = new Date().getFullYear();
 
-// Set last modified date
+// Dynamically set the last modified date in the footer
 document.getElementById("lastModified").textContent = "Last modified: " + document.lastModified;
