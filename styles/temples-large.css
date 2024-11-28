@@ -1,11 +1,11 @@
 /* CSS Variables for easier maintainability */
 :root {
-    --primary-color: #4CAF50; /* Same primary color from temples.css */
+    --primary-color: #4CAF50;
     --secondary-color: #fff;
     --font-family: 'Arial', sans-serif;
 }
 
-/* Ensure the body, header, main, and footer inherit base styles */
+/* Ensures the body, header, main, and footer inherit base styles */
 body {
     font-family: var(--font-family);
 }
@@ -17,18 +17,9 @@ nav {
     padding: 10px 0;
 }
 
+/* Remove redundant display: grid as it is handled in temples.css */
 main {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns for larger screens */
-    gap: 20px;
     padding: 20px;
-}
-
-/* Remove unnecessary repeated declarations */
-figure {
-    margin: 0;
-    padding: 10px;
-    border: 1px solid #ddd;
 }
 
 /* Footer remains the same */

@@ -38,6 +38,7 @@ nav a:hover {
     border-radius: 5px;
 }
 
+/* Mobile grid layout - one column */
 main {
     display: grid;
     grid-template-columns: 1fr; /* One column for mobile view */
@@ -59,4 +60,11 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+/* Media query for larger screens (e.g., tablet or desktop) */
+@media screen and (min-width: 768px) {
+    main {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for larger screens */
+    }
 }
