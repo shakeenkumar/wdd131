@@ -1,15 +1,30 @@
 /* Base styles for the webpage */
-body {
-     font-family: 'Roboto', sans-serif;  /* Default body font */
-    }
-    
-    h1, h2, h3, h4, p {
-    font-family: 'Open Sans', sans-serif; 
+/* Reset some default browser styles */
+body, h1, p {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    box-sizing: border-box;
+}
+
+/* Apply the fonts */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600; /* Semi-bold for Open Sans */
+    font-size: 2rem;
     color: #333;
 }
+
+p {
+    font-weight: 400; /* Regular for Roboto */
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #555;
+}
+
 
 /* Header Styling */
 header {
