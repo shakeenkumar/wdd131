@@ -128,7 +128,7 @@ footer {
     text-align: center;
     padding: 1.5em;
     margin-top: 2em;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Inverted shadow for footer */
+    box-shadow: 0 -4px 8px rgba(246, 241, 241, 0.882); /* Inverted shadow for footer */
 }
 
 footer p {
