@@ -66,7 +66,7 @@ footer p {
 }
 
 /* Media Query for larger screens */
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
     main {
         grid-template-columns: repeat(3, 1fr); /* Explicitly 3 images per row */
     }
