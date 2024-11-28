@@ -35,10 +35,10 @@ nav a:hover {
     padding: 5px;
 }
 
-/* Main content layout for larger screens - 3 columns */
+/* Main content layout for larger screens - 3 columns per row */
 main {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Adjust to 3 columns for larger screens */
+    grid-template-columns: repeat(3, 1fr); /* Ensure 3 columns per row */
     gap: 20px;
     padding: 20px;
     justify-items: center; /* Center the images */
@@ -68,7 +68,7 @@ footer p {
 /* Media Query for larger screens */
 @media screen and (min-width: 1024px) {
     main {
-        grid-template-columns: repeat(4, 1fr); /* 4 columns for very large screens */
+        grid-template-columns: repeat(3, 1fr); /* Explicitly 3 images per row */
     }
 
     nav {
