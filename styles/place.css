@@ -11,9 +11,15 @@ body {
     background-color: #e1ed99;
 }
 
+/* :root pseudo-class used with two global variables */
+:root {
+    --primary-color: #109e95;
+    --secondary-color: #5bdbea;
+}
+
 /* Header */
 .header {
-    background-color: #109e95;
+    background-color: var(--primary-color);
     color: white;
     text-align: center;
     padding: 1rem 0;
@@ -27,7 +33,7 @@ body {
 
 /* Data Section */
 .data {
-    background-color: #5bdbea;
+    background-color: var(--secondary-color);
     margin: 1rem;
     padding: 1rem;
     border-radius: 10px;
@@ -99,10 +105,4 @@ footer {
     .hero img {
         object-fit: cover;
     }
-}
-
-/* Using :root pseudo-class for global variables */
-:root {
-    --primary-color: #109e95;
-    --secondary-color: #5bdbea;
 }
