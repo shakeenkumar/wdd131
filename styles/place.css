@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif; /* Using the Google Font */
+    font-family: 'Roboto', sans-serif; /* Fallback font */
     line-height: 1.5;
     background-color: #e1ed99;
 }
@@ -98,6 +98,10 @@ footer {
     background-color: #24bab0;
     color: white;
     font-size: 0.9rem;
+}
+
+a:focus, button:focus {
+    outline: 2px solid #109e95; /* Add a focus outline */
 }
 
 /* Add media queries */
