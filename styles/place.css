@@ -157,6 +157,14 @@ aside ul li a:hover {
     color: #5f9ea0;
 }
 
+/* Style for the weather icon */
+.weather-icon {
+    font-size: 1.2rem; /* Adjust size as needed */
+    vertical-align: middle; /* Align it with the text */
+    margin-right: 8px; /* Add spacing between the icon and the text */
+}
+
+
 /* Footer */
 footer {
     background: linear-gradient(135deg, #5f9ea0, #4682b4);
