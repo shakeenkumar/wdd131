@@ -17,7 +17,7 @@ header {
     text-align: center;
     padding: 20px;
     background: linear-gradient(to right, var(--primary-color), var(--accent-color));
-    color: white;
+    color: rgb(100, 204, 239);
     position: relative;
 }
 
