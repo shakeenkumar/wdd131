@@ -1,0 +1,86 @@
+/* General Reset */
+body, h1, h2, ul, li, p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Hero Section */
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+/* City Info Section */
+.city-info {
+    padding: 20px;
+    background: white;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.city-info h2 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+/* Weather Section */
+.weather {
+    text-align: center;
+    padding: 20px;
+    background: white;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+.weather-heading {
+    font-size: 2rem;
+    position: relative;
+}
+
+/* Emoticon in Wider Views */
+.weather-heading::after {
+    content: " ⛅";
+    font-size: 1.5rem;
+    color: var(--accent-color);
+}
+
+.weather-icon {
+    display: none; /* Default hidden for wider view */
+}
+
+@media (max-width: 768px) {
+    .weather-heading::after {
+        content: "";
+    }
+
+    .weather-icon {
+        display: inline-block;
+        width: 50px;
+        height: auto;
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+}
