@@ -2,6 +2,11 @@
 document.getElementById("year").textContent = new Date().getFullYear();
 document.getElementById("last-modified").textContent = document.lastModified;
 
+// Display the current date in the header
+const today = new Date();
+const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+document.getElementById("current-date").textContent = today.toLocaleDateString('en-US', options);
+
 // Calculate Wind Chill
 const temperature = 28; // Static value in Celsius
 const windSpeed = 15; // Static value in km/h
