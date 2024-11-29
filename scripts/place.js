@@ -1,30 +1,23 @@
-// Footer: Current Year and Last Modified
-document.getElementById("year").textContent = new Date().getFullYear();
-document.getElementById("last-modified").textContent = document.lastModified;
-
-// Display the current date in the header
-const today = new Date();
-const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-document.getElementById("current-date").textContent = today.toLocaleDateString('en-US', options);
-
-// Calculate Wind Chill
-const temperature = 28; // Static value in Celsius
-const windSpeed = 15; // Static value in km/h
-
-function calculateWindChill(temp, speed) {
-    return (
+// Function to calculate Wind Chill
+function calculateWindChill(temp, windSpeed) {
+    if (temp <= 10 && windSpeed > 4.8) {
+      return (
         13.12 +
         0.6215 * temp -
-        11.37 * Math.pow(speed, 0.16) +
-        0.3965 * temp * Math.pow(speed, 0.16)
-    ).toFixed(1);
-}
-
-if (temperature <= 10 && windSpeed > 4.8) {
-    document.getElementById("windchill").textContent = `${calculateWindChill(
-        temperature,
-        windSpeed
-    )} °C`;
-} else {
-    document.getElementById("windchill").textContent = "N/A";
-}
+        11.37 * Math.pow(windSpeed, 0.16) +
+        0.3965 * temp * Math.pow(windSpeed, 0.16)
+      ).toFixed(1);
+    } else {
+      return "N/A";
+    }
+  }
+  
+  // Display Wind Chill
+  const temperature = 30; // Static temperature (Celsius)
+  const windSpeed = 15; // Static wind speed (km/h)
+  const windChillElement = document.getElementById("windchill");
+  windChillElement.textContent = calculateWindChill(temperature, windSpeed);
+  
+  // Display Last Modified Date
+  const lastModifiedElement = document.getElementById("last-modified");
+  lastModifiedElement.textContent = document.lastModified;
