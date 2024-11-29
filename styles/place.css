@@ -1,127 +1,162 @@
+/* Global Variables */
+:root {
+    --primary-color: #ff7e5f; /* Vibrant orange-pink */
+    --secondary-color: #feb47b; /* Light orange-pink */
+    --accent-color: #0074D9; /* Deep blue for contrast */
+    --text-color: #333333; /* Dark text color */
+    --background-color: #f4f4f9; /* Light grey background */
+    --header-text-color: white; /* For header text */
+    --footer-bg-color: #282c34; /* Dark footer */
+    --footer-text-color: #ffffff; /* Footer text */
+}
+
 /* General Reset */
-body, h1, h2, ul, li, p {
+body, h1, h2, h3, p {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
+/* Body Styling */
 body {
-    font-family: 'Poppins', sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.6;
+    padding: 0;
+    margin: 0;
 }
 
-/* Header */
+/* Header Styling */
 header {
     text-align: center;
     padding: 20px;
-    background: linear-gradient(to right, var(--primary-color), var(--accent-color));
-    color: rgb(100, 204, 239);
-    position: relative;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    color: var(--header-text-color);
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
+    font-weight: bold;
     margin-bottom: 10px;
 }
 
 header .date {
-    font-size: 1rem;
-    color: var(--background-color);
-    margin-top: 5px;
+    font-size: 1.2rem;
+    font-style: italic;
 }
 
-/* Hero Section */
+/* Hero Section Styling */
+.hero {
+    margin: 20px auto;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 .hero img {
     width: 100%;
     height: auto;
-    display: block;
-    border: 5px solid var(--accent-color);
-    border-radius: 10px;
-    margin: 20px 0;
 }
 
-/* City Info Section */
-.city-info {
-    padding: 20px;
-    background: var(--info-bg-color);
-    margin: 10px auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-}
-
-.city-info h2 {
-    color: var(--primary-color);
-    margin-bottom: 10px;
-    font-size: 2rem;
-}
-
-.city-info ul {
-    list-style: none;
-    padding: 0;
-}
-
-.city-info li {
-    font-size: 1.2rem;
-    margin: 8px 0;
-}
-
-/* Weather Section */
+/* Weather Section Styling */
 .weather {
-    text-align: center;
+    background: var(--primary-color);
+    color: var(--header-text-color);
     padding: 20px;
-    background: var(--weather-bg-color);
-    margin: 20px auto;
-    border-radius: 8px;
-    max-width: 800px;
+    border-radius: 10px;
+    margin: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-.weather-heading {
-    font-size: 2.5rem;
-    position: relative;
-    margin-bottom: 15px;
-    color: var(--accent-color);
-}
-
-/* Emoticon for Weather */
-.weather-heading::after {
-    content: " ⛅"; /* Weather emoticon */
+.weather h2 {
     font-size: 2rem;
-    margin-left: 10px;
-    color: var(--highlight-color);
-}
-
-.weather-icon {
-    display: none; /* Hidden in wider views */
+    margin-bottom: 15px;
 }
 
 .weather p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    margin: 5px 0;
+}
+
+/* Add Emoticon for Weather in Wider View */
+@media screen and (min-width: 768px) {
+    .weather h2::after {
+        content: " ⛅";
+        font-size: 2rem;
+    }
+}
+
+/* Area Information Section */
+.area-info {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    background: var(--secondary-color);
+    color: var(--text-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    font-size: 1.1rem;
+}
+
+.area-info h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
     color: var(--text-color);
 }
 
-@media (max-width: 768px) {
-    .weather-heading::after {
-        content: ""; /* Remove emoticon in mobile view */
-    }
-
-    .weather-icon {
-        display: inline-block;
-        width: 50px;
-        height: auto;
-        margin: 10px 0;
-    }
+.area-info p {
+    margin: 5px 0;
 }
 
-/* Footer */
+/* Footer Styling */
 footer {
+    background-color: var(--footer-bg-color);
+    color: var(--footer-text-color);
     text-align: center;
     padding: 10px;
-    background-color: var(--primary-color);
-    color: white;
-    font-size: 1rem;
     margin-top: 20px;
-    border-top: 5px solid var(--accent-color);
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Button Styling */
+button {
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #0056a3;
+}
+
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    .weather {
+        font-size: 1rem;
+        padding: 15px;
+    }
+
+    .area-info {
+        font-size: 1rem;
+    }
 }
