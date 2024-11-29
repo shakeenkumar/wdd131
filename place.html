@@ -5,51 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Rajahmundry - A beautiful city by the Godavari River.">
     <meta name="author" content="Shakeen Kumar">
-    <link rel="stylesheet" href="styles/place.css">
-    <link rel="stylesheet" href="styles/place.css">
-    <title>Explore Rajahmundry</title>
+  <title>Rajahmundry</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Welcome to Rajahmundry</h1>
-        <p class="date" id="current-date"></p>
-    </header>
+  <!-- Header Section -->
+  <header class="header">
+    <h1>Rajahmundry</h1>
+  </header>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <picture>
-                <source srcset="images/hero-wide.webp" media="(min-width: 768px)">
-                <img src="images/hero-mobile.webp" alt="A scenic view of Rajahmundry">
-            </picture>
-        </section>
+  <!-- Hero Section -->
+  <section class="hero">
+    <picture>
+      <source srcset="images/rajahmundry-large.webp" media="(min-width: 768px)" type="image/webp">
+      <source srcset="images/rajahmundry-small.webp" type="image/webp">
+      <img src="images/rajahmundry-default.webp" alt="Scenic view of Godavari River in Rajahmundry">
+    </picture>
+  </section>
 
-        <!-- City Information Section -->
-        <section class="city-info">
-            <h2>About Rajahmundry</h2>
-            <ul>
-                <li><strong>Population:</strong> ~540,000</li>
-                <li><strong>Language:</strong> Telugu</li>
-                <li><strong>Currency:</strong> Indian Rupee (₹)</li>
-                <li><strong>Time Zone:</strong> IST (UTC+5:30)</li>
-            </ul>
-        </section>
+  <!-- Data Section -->
+  <section class="data">
+    <h2>Data</h2>
+    <ul>
+      <li><strong>Area:</strong> 108.7 sq km</li>
+      <li><strong>Population:</strong> ~350,000</li>
+      <li><strong>Capital:</strong> N/A</li>
+      <li><strong>Languages:</strong> Telugu, English</li>
+      <li><strong>Currency:</strong> Indian Rupee (INR)</li>
+      <li><strong>Time Zone:</strong> UTC+5:30</li>
+      <li><strong>Calling Code:</strong> +91</li>
+      <li><strong>Internet TLD:</strong> .in</li>
+    </ul>
+  </section>
 
-        <!-- Weather Section -->
-        <section class="weather">
-            <h2><span class="weather-icon">⛅</span>Weather</h2>
-            <img src="images/weather-icon.svg" alt="Weather icon for mobile view" class="weather-icon">
-            <p>Temperature: 28°C</p>
-            <p>Wind Speed: 15 km/h</p>
-            <p>Wind Chill: <span id="windchill">Calculating...</span></p>
-        </section>
-    </main>
+  <!-- Weather Section -->
+  <section class="weather">
+    <h2>Weather</h2>
+    <div class="weather-info">
+      <!-- SVG Weather Icon for Mobile View -->
+      <div class="weather-icon-mobile">
+        <img src="images/weather-icon.svg" alt="Weather Icon" width="80" height="80">
+      </div>
+      <ul>
+        <li><strong>Temperature:</strong> 30°C</li>
+        <li><strong>Conditions:</strong> Partly Cloudy</li>
+        <li><strong>Wind:</strong> 15 km/h</li>
+        <li><strong>Wind Chill:</strong> <span id="windchill">N/A</span></li>
+      </ul>
+    </div>
+  </section>
 
-    <footer>
-        <p>&copy; <span id="year"></span> Rajahmundry Tourism</p>
-        <p>Last Modified: <span id="last-modified"></span></p>
-    </footer>
-
-    <script src="scripts/place.js" defer></script>
+  <!-- Footer -->
+  <footer>
+    <p>©2024 Rajahmundry</p>
+    <p>Last Modification: <span id="last-modified"></span></p>
+  </footer>
 </body>
 </html>
