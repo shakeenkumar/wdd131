@@ -3,93 +3,106 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Arial', sans-serif;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Using the Google Font */
     line-height: 1.5;
     background-color: #e1ed99;
-  }
-  
-  /* Header */
-  .header {
+}
+
+/* Header */
+.header {
     background-color: #109e95;
     color: white;
     text-align: center;
     padding: 1rem 0;
-  }
-  
-  /* Hero Section */
-  .hero img {
+}
+
+/* Hero Section */
+.hero img {
     width: 100%;
     display: block;
-  }
-  
-  /* Data Section */
-  .data {
+}
+
+/* Data Section */
+.data {
     background-color: #5bdbea;
     margin: 1rem;
     padding: 1rem;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .data h2 {
+}
+
+.data h2 {
     text-align: center;
     margin-bottom: 1rem;
     color: #d66db9;
-  }
-  
-  .data ul {
+}
+
+.data ul {
     list-style-type: none;
     padding: 0;
-  }
-  
-  .data li {
+}
+
+.data li {
     padding: 0.5rem;
     font-size: 1rem;
     border-bottom: 1px solid #ddd;
-  }
-  
-  .data li:last-child {
+}
+
+.data li:last-child {
     border-bottom: none;
-  }
-  
-  /* Weather Section */
-  .weather {
+}
+
+/* Weather Section */
+.weather {
     margin: 1rem;
     background-color: #fff;
     padding: 1rem;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .weather h2 {
+}
+
+.weather h2 {
     text-align: center;
     color: #b22222;
     margin-bottom: 1rem;
-  }
-  
-  .weather-info {
+}
+
+.weather-info {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-  }
-  
-  .weather ul {
+}
+
+.weather ul {
     list-style-type: none;
-  }
-  
-  .weather li {
+}
+
+.weather li {
     font-size: 1rem;
-  }
-  
-  /* Footer */
-  footer {
+}
+
+/* Footer */
+footer {
     text-align: center;
     padding: 1rem;
     background-color: #24bab0;
     color: white;
     font-size: 0.9rem;
-  }
+}
+
+/* Add media queries */
+@media (max-width: 768px) {
+    .hero img {
+        object-fit: cover;
+    }
+}
+
+/* Using :root pseudo-class for global variables */
+:root {
+    --primary-color: #109e95;
+    --secondary-color: #5bdbea;
+}
