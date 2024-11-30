@@ -1,65 +1,16 @@
-/* filtered-temples-large.css */
+/* temples-large.css */
 
 /* Adjust grid for larger screens */
 @media screen and (min-width: 768px) {
-    /* Temple Image Grid for larger screens */
     .temple-images {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr); /* 3 columns */
-        gap: 30px; /* Spacing between the images */
-        margin-top: 20px;
-    }
-
-    /* Navigation Styling for wider screens */
-    #nav-menu {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 10px;
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on larger screens */
     }
 
     #nav-menu ul {
-        list-style: none;
-        display: flex;
-        gap: 20px; /* Adjust the spacing between buttons */
+        display: block;
     }
 
     #hamburger-menu {
-        display: none; /* Hide the hamburger menu on wider screens */
-    }
-
-    #nav-menu ul li {
-        font-size: 1.2em;
-    }
-
-    #nav-menu ul li a {
-        text-decoration: none;
-        color: white;
-        font-weight: bold;
-    }
-
-    /* Header Styling */
-    header h1 {
-        font-size: 2.5em;
-        margin-bottom: 20px;
-    }
-
-    /* Temple cards container */
-    .temple-cards-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr); /* 3 columns */
-        gap: 30px;
-        margin-top: 30px;
-    }
-
-    /* Footer */
-    footer {
-        font-size: 1.1em;
-        padding: 15px;
-        margin-top: 30px;
-    }
-
-    footer p {
-        margin: 5px 0;
+        display: none;
     }
 }
