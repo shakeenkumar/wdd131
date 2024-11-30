@@ -60,19 +60,20 @@ nav {
 /* Temple Image Grid - 3 Columns */
 .temple-images {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive column layout */
+    gap: 20px;
     margin-top: 30px;
     padding: 0 20px;
 }
 
-/* Image Style */
+/* Image Card Style */
 figure {
     background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Softer shadow */
     overflow: hidden;
     transition: transform 0.3s ease;
+    padding: 10px;
 }
 
 figure:hover {
@@ -83,14 +84,16 @@ img {
     width: 100%;
     height: auto;
     display: block;
+    border-bottom: 2px solid #ddd; /* Border between image and text */
 }
 
 figcaption {
-    padding: 10px;
+    padding: 15px;
     text-align: center;
     font-size: 1.1em;
     background-color: #f8f8f8;
     border-top: 2px solid #ddd;
+    color: #555;
 }
 
 /* Footer Styles */
@@ -105,18 +108,18 @@ footer {
 }
 
 /* Responsive Media Queries for Larger Screens */
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
     header h1 {
         font-size: 3em; /* Larger font size on even wider screens */
     }
 
     .temple-images {
-        gap: 40px;
+        gap: 30px;
         padding: 0 50px;
     }
 
     .temple-images figure {
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15); /* Larger shadow for larger screens */
     }
 
     figcaption {
