@@ -1,36 +1,41 @@
+/* filtered-temples-large.css */
+
 /* Adjust grid for larger screens */
 @media screen and (min-width: 768px) {
-    /* Temple Image Grid */
+    /* Temple Image Grid for larger screens */
     .temple-images {
         display: grid;
-        grid-template-columns: repeat(3, 1fr); /* 3 columns on larger screens */
-        gap: 30px; /* Space between the images */
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+        gap: 30px; /* Spacing between the images */
         margin-top: 20px;
     }
 
-    /* Navigation Styling for larger screens */
-    #nav-menu ul {
+    /* Navigation Styling for wider screens */
+    #nav-menu {
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 10px;
+    }
+
+    #nav-menu ul {
         list-style: none;
+        display: flex;
+        gap: 20px; /* Adjust the spacing between buttons */
     }
 
-    /* Hide hamburger menu on larger screens */
     #hamburger-menu {
-        display: none;
+        display: none; /* Hide the hamburger menu on wider screens */
     }
 
-    /* Styling for nav items in the menu */
     #nav-menu ul li {
-        margin: 0 20px;
+        font-size: 1.2em;
     }
 
-    /* Navigation link styles */
     #nav-menu ul li a {
-        color: white;
         text-decoration: none;
-        font-size: 1.2em;
+        color: white;
+        font-weight: bold;
     }
 
     /* Header Styling */
@@ -39,22 +44,15 @@
         margin-bottom: 20px;
     }
 
-    /* Temple image container settings for larger screens */
+    /* Temple cards container */
     .temple-cards-container {
-        grid-template-columns: repeat(3, 1fr);  /* 3 columns on larger screens */
-        gap: 30px;  /* More space between temple images */
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+        gap: 30px;
+        margin-top: 30px;
     }
 
-    /* Figure styling */
-    figure {
-        text-align: center;
-        background-color: #fff;
-        padding: 15px;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    /* Footer Styling */
+    /* Footer */
     footer {
         font-size: 1.1em;
         padding: 15px;
