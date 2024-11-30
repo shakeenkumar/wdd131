@@ -2,8 +2,12 @@
 
 /* Adjust grid for larger screens */
 @media screen and (min-width: 768px) {
+    body {
+        background-color: lightgreen; /* For testing wide view */
+    }
+
     .temple-images {
-        grid-template-columns: repeat(3, 1fr); /* 3 columns on larger screens */
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on wider screens */
     }
 
     #nav-menu ul {
@@ -11,6 +15,20 @@
     }
 
     #hamburger-menu {
-        display: none;
+        display: none; /* Hide hamburger menu on wider screens */
+    }
+
+    /* Adjust header for wider screens */
+    header h1 {
+        font-size: 2em;
+    }
+
+    /* Style for the navigation menu when it's displayed */
+    nav {
+        flex-direction: row; /* Align buttons horizontally on larger screens */
+    }
+
+    #nav-menu ul li {
+        margin: 0 20px;
     }
 }
