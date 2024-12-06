@@ -66,27 +66,27 @@ nav {
 }
 
 /* Image Card Style */
+/* Add padding and borders to image container for better appearance */
 figure {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease;
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    margin: 20px;
+    padding: 10px;
+    border: 2px solid #ddd; /* Optional: Adds a border around image */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+    text-align: center; /* Align caption below image */
+    max-width: 100%;
 }
 
 figure:hover {
     transform: scale(1.05);
 }
 
+/* Ensuring image is responsive and fills the container */
 img {
-    width: 100%; /* Full width of the card */
-    height: 250px; /* Fixed height for the image */
-    object-fit: cover; /* Ensures images cover the available space */
-    border-radius: 10px;
+    width: 100%; /* Make the image take up full width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image fits the container without stretching */
+    max-width: 100%; /* Avoid image stretching beyond its natural size */
 }
 
 /* Temple Details below each image */
@@ -150,31 +150,5 @@ footer {
     button {
         padding: 10px 20px;
         font-size: 1em;
-    }
-}
-/* Ensuring image is responsive and fills the container */
-img {
-    width: 100%; /* Make the image take up full width */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Ensure the image fits the container without stretching */
-    max-width: 100%; /* Avoid image stretching beyond its natural size */
-}
-
-/* Add padding and borders to image container for better appearance */
-figure {
-    margin: 20px;
-    padding: 10px;
-    border: 2px solid #ddd; /* Optional: Adds a border around image */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
-    border-radius: 10px; /* Optional: Adds rounded corners */
-    text-align: center; /* Align caption below image */
-    max-width: 100%;
-}
-
-/* Responsiveness */
-@media (max-width: 768px) {
-    img {
-        width: 100%;
-        height: auto;
     }
 }
