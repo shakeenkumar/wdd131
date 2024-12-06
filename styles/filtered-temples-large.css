@@ -5,20 +5,23 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
+    line-height: 1.6;
 }
 
 /* Header Styles */
 header {
     background-color: #333;
     color: white;
-    padding: 20px;
+    padding: 20px 0;
     text-align: center;
+    margin-bottom: 30px;
 }
 
 header h1 {
     font-size: 2.5em;
     letter-spacing: 1px;
     text-transform: uppercase;
+    margin-bottom: 0;
 }
 
 /* Navigation Bar */
@@ -28,7 +31,7 @@ nav {
     align-items: center;
     margin-top: 10px;
     background-color: #444;
-    padding: 8px;
+    padding: 10px;
     border-radius: 5px;
 }
 
@@ -58,7 +61,7 @@ nav {
 .temple-images {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columns */
-    gap: 30px; /* Adjusted gap for larger spacing */
+    gap: 20px; /* Reduced gap for tighter layout */
     margin-top: 30px;
     padding: 0 15px;
     max-width: 1200px;
@@ -66,27 +69,24 @@ nav {
 }
 
 /* Image Card Style */
-/* Add padding and borders to image container for better appearance */
 figure {
-    margin: 20px;
+    margin: 0;
     padding: 10px;
-    border: 2px solid #ddd; /* Optional: Adds a border around image */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
-    border-radius: 10px; /* Optional: Adds rounded corners */
-    text-align: center; /* Align caption below image */
-    max-width: 100%;
-}
-
-figure:hover {
-    transform: scale(1.05);
+    border: 2px solid #ddd;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 10px;
+    text-align: center;
+    background-color: #fff;
+    overflow: hidden; /* Ensures no overflow outside the figure */
 }
 
 /* Ensuring image is responsive and fills the container */
-img {
-    width: 100%; /* Make the image take up full width */
+figure img {
+    width: 100%; /* Full width */
     height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Ensure the image fits the container without stretching */
-    max-width: 100%; /* Avoid image stretching beyond its natural size */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    max-width: 100%;
+    display: block; /* Removes bottom space */
 }
 
 /* Temple Details below each image */
@@ -117,11 +117,11 @@ footer {
     }
 
     figure {
-        padding: 10px;
+        padding: 15px;
     }
 
     img {
-        height: 200px; /* Smaller image height on smaller screens */
+        height: 200px; /* Smaller image height on small screens */
     }
 
     header h1 {
@@ -133,14 +133,21 @@ footer {
     }
 }
 
-/* Tablet and Larger Screens */
+/* Background Enhancement */
+body {
+    background-color: #f9f9f9; /* Light gray background for better readability */
+    background-image: linear-gradient(to right, #f9f9f9, #e0e0e0); /* Subtle gradient */
+    padding: 0 20px; /* Adds some padding around the page */
+}
+
+/* More Adjustments for Larger Screens */
 @media (min-width: 769px) {
     .temple-images {
-        grid-template-columns: repeat(3, 1fr); /* 3 columns on larger screens */
+        grid-template-columns: repeat(3, 1fr); /* Maintain 3 columns on larger screens */
     }
 
     header h1 {
-        font-size: 2.5em;
+        font-size: 3em;
     }
 
     footer {
