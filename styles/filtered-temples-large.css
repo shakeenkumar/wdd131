@@ -60,7 +60,7 @@ nav {
 /* Temple Image Grid */
 .temple-images {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
     gap: 20px; /* Reduced gap for tighter layout */
     margin-top: 30px;
     padding: 0 15px;
