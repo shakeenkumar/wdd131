@@ -3,37 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temple Album - Explore Beautiful Temples</title> <!-- More specific title -->
-    <meta name="description" content="Explore beautiful temples from around the world. Discover architectural wonders and cultural history."> <!-- Slightly enhanced description -->
-    <meta name="author" content="shakeen kumar"> <!-- Replace with your name -->
-  <!-- Link CSS Files -->
-  <link rel="stylesheet" href="styles/filtered-temples.css" media="(max-width: 768px)">
-  <link rel="stylesheet" href="styles/filtered-temples-large.css" media="(min-width: 768px)">
+    <title>Temple Photo Gallery - Explore Beautiful Temples</title> <!-- Enhanced title -->
+    <meta name="description" content="Explore beautiful temples from around the world and filter them based on location, dedication year, and size.">
+    <meta name="author" content="Shakeen Kumar">
 
+    <!-- Link CSS Files -->
+    <link rel="stylesheet" href="styles/filtered-temples.css" media="(max-width: 768px)">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css" media="(min-width: 768px)">
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <h1>Temples</h1>
-    <nav>
-      <button id="home">Home</button>
-      <button id="old">Old</button>
-      <button id="new">New</button>
-      <button id="large">Large</button>
-      <button id="small">Small</button>
-    </nav>
-  </header>
+    <!-- Header -->
+    <header>
+        <h1>Temple Photo Gallery</h1>
+        <nav>
+            <a href="#home" id="home">Home</a>
+            <a href="#about">About</a>
+            <a href="#temple-filters" id="old">Old Temples</a>
+            <a href="#temple-filters" id="new">New Temples</a>
+            <a href="#temple-filters" id="large">Large Temples</a>
+            <a href="#temple-filters" id="small">Small Temples</a>
+        </nav>
+    </header>
 
-  <!-- Main Content -->
-  <main id="temple-cards-container"></main>
+    <!-- Main Content -->
+    <main>
+        <h2>Explore Our Temple Collection</h2> <!-- Added subheading -->
+        <section id="temple-cards-container"></section>
+    </main>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; <span id="current-year"></span>. All Rights Reserved.</p>
-    <p id="last-modified"></p>
-</footer>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <span id="current-year"></span>. All Rights Reserved.</p>
+        <p id="last-modified"></p>
+    </footer>
 
-  <!-- JavaScript File -->
-  <script src="scripts/filtered-temples.js"></script>
+    <!-- JavaScript File -->
+    <script src="scripts/filtered-temples.js" defer></script>
 </body>
 </html>
