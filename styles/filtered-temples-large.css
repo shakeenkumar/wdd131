@@ -3,7 +3,7 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4; /* Light background color */
+    background-color: #f4f4f4;
     color: #333;
 }
 
@@ -11,13 +11,12 @@ body {
 header {
     background-color: #333;
     color: white;
-    padding: 15px;
+    padding: 20px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-    font-size: 2.5em; /* Larger font size */
+    font-size: 2.5em;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
@@ -27,7 +26,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 8px;
+    margin-top: 10px;
     background-color: #444;
     padding: 8px;
     border-radius: 5px;
@@ -55,12 +54,12 @@ nav {
     color: #ff9800;
 }
 
-/* Temple Image Grid - 3 Columns */
+/* Temple Image Grid */
 .temple-images {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columns */
     gap: 30px; /* Adjusted gap for larger spacing */
-    margin-top: 25px;
+    margin-top: 30px;
     padding: 0 15px;
     max-width: 1200px;
     margin: 0 auto; /* Center the grid */
@@ -73,25 +72,28 @@ figure {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.3s ease;
-    padding: 15px; /* Increased padding */
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 figure:hover {
-    transform: scale(1.05); /* Slight zoom effect */
+    transform: scale(1.05);
 }
 
 img {
     width: 100%; /* Full width of the card */
-    height: 300px; /* Larger height for images */
-    object-fit: cover; /* Ensure the image covers the area nicely */
+    height: 250px; /* Fixed height for the image */
+    object-fit: cover; /* Ensures images cover the available space */
     border-radius: 10px;
 }
 
 /* Temple Details below each image */
 figcaption {
-    padding: 15px; /* More padding for readability */
+    padding: 10px;
     text-align: center;
-    font-size: 1.1em; /* Larger font size */
+    font-size: 1.1em;
     background-color: #f8f8f8;
     border-top: 2px solid #ddd;
     color: #555;
@@ -103,44 +105,50 @@ footer {
     color: white;
     text-align: center;
     padding: 15px 0;
-    margin-top: 25px;
-    font-size: 1.2em; /* Slightly larger font size */
+    margin-top: 30px;
+    font-size: 1.2em;
     letter-spacing: 1px;
 }
 
-/* Responsive Media Queries for Larger Screens */
+/* Responsive Media Queries */
 @media (max-width: 768px) {
     .temple-images {
-      grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+        grid-template-columns: 1fr; /* Single column for smaller screens */
     }
 
-    .temple-images {
-        gap: 40px; /* Increased gap on larger screens */
-        padding: 0 40px;
-    }
-
-    .temple-images figure {
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Larger shadow */
-    }
-
-    figcaption {
-        font-size: 1.2em; /* Larger font size on larger screens */
-    }
-}
-
-/* Responsive Adjustments for Smaller Screens */
-@media screen and (max-width: 1028x) {
-    .temple-images {
-        grid-template-columns: 1fr; /* Single column on smaller screens */
-        gap: 15px;
-        padding: 0 10px;
+    figure {
+        padding: 10px;
     }
 
     img {
-        height: 200px; /* Smaller images on mobile */
+        height: 200px; /* Smaller image height on smaller screens */
     }
 
-    figcaption {
-        font-size: 1em; /* Slightly smaller font size on mobile */
+    header h1 {
+        font-size: 2em;
+    }
+
+    footer {
+        font-size: 1em;
+    }
+}
+
+/* Tablet and Larger Screens */
+@media (min-width: 769px) {
+    .temple-images {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on larger screens */
+    }
+
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    footer {
+        font-size: 1.2em;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 1em;
     }
 }
