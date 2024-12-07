@@ -10,15 +10,16 @@ const temples = [
   { templeName: "Lima Perú", location: "Lima, Perú", dedicated: "1986, January, 10", area: 9600, imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/lima-peru/400x250/lima-peru-temple-evening-1075606-wallpaper.jpg" }
 ];
 
-// Render temple cards
+// Render temple cards with an optional filter
 function renderTemples(filteredTemples = temples) {
   const container = document.getElementById("temple-cards-container");
-  container.innerHTML = "";
+  container.innerHTML = "";  // Clear previous cards
+  
   filteredTemples.forEach((temple) => {
       const card = document.createElement("div");
       card.classList.add("temple-card");
       card.innerHTML = `
-          <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
+          <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy" width="400" height="250">
           <h3>${temple.templeName}</h3>
           <p>Location: ${temple.location}</p>
           <p>Dedicated: ${temple.dedicated}</p>
@@ -28,27 +29,38 @@ function renderTemples(filteredTemples = temples) {
   });
 }
 
-// Filter logic
+// Filter logic for temples
 function filterTemples(criteria) {
+  let filtered = [];
   switch (criteria) {
-      case "old": renderTemples(temples.filter(t => new Date(t.dedicated).getFullYear() < 1900)); break;
-      case "new": renderTemples(temples.filter(t => new Date(t.dedicated).getFullYear() > 2000)); break;
-      case "large": renderTemples(temples.filter(t => t.area > 90000)); break;
-      case "small": renderTemples(temples.filter(t => t.area < 10000)); break;
-      default: renderTemples();
+      case "old":
+          filtered = temples.filter(t => new Date(t.dedicated).getFullYear() < 1900);
+          break;
+      case "new":
+          filtered = temples.filter(t => new Date(t.dedicated).getFullYear() > 2000);
+          break;
+      case "large":
+          filtered = temples.filter(t => t.area > 90000);
+          break;
+      case "small":
+          filtered = temples.filter(t => t.area < 10000);
+          break;
+      default:
+          filtered = temples; // Reset to all temples
   }
+  renderTemples(filtered); // Render filtered temples
 }
 
-// Event Listeners for filters
+// Add event listeners for filtering buttons
 document.getElementById("home").addEventListener("click", () => filterTemples());
 document.getElementById("old").addEventListener("click", () => filterTemples("old"));
 document.getElementById("new").addEventListener("click", () => filterTemples("new"));
 document.getElementById("large").addEventListener("click", () => filterTemples("large"));
 document.getElementById("small").addEventListener("click", () => filterTemples("small"));
 
-// Footer info
+// Update footer info dynamically
 document.getElementById("current-year").textContent = new Date().getFullYear();
 document.getElementById("last-modified").textContent = `Last Modified: ${document.lastModified}`;
 
-// Initial render
+// Initial render of all temples
 renderTemples();
