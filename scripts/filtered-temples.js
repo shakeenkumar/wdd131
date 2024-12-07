@@ -13,19 +13,24 @@ const temples = [
 // Render temple cards with an optional filter
 function renderTemples(filteredTemples = temples) {
   const container = document.getElementById("temple-cards-container");
+  if (!container) {
+    console.error("Temple cards container not found!");
+    return;
+  }
+  
   container.innerHTML = "";  // Clear previous cards
   
   filteredTemples.forEach((temple) => {
-      const card = document.createElement("div");
-      card.classList.add("temple-card");
-      card.innerHTML = `
-          <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy" width="400" height="250">
-          <h3>${temple.templeName}</h3>
-          <p>Location: ${temple.location}</p>
-          <p>Dedicated: ${temple.dedicated}</p>
-          <p>Area: ${temple.area} sq ft</p>
-      `;
-      container.appendChild(card);
+    const card = document.createElement("div");
+    card.classList.add("temple-card");
+    card.innerHTML = `
+      <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy" width="400" height="250">
+      <h3>${temple.templeName}</h3>
+      <p>Location: ${temple.location}</p>
+      <p>Dedicated: ${temple.dedicated}</p>
+      <p>Area: ${temple.area} sq ft</p>
+    `;
+    container.appendChild(card);
   });
 }
 
@@ -33,34 +38,34 @@ function renderTemples(filteredTemples = temples) {
 function filterTemples(criteria) {
   let filtered = [];
   switch (criteria) {
-      case "old":
-          filtered = temples.filter(t => new Date(t.dedicated).getFullYear() < 1900);
-          break;
-      case "new":
-          filtered = temples.filter(t => new Date(t.dedicated).getFullYear() > 2000);
-          break;
-      case "large":
-          filtered = temples.filter(t => t.area > 90000);
-          break;
-      case "small":
-          filtered = temples.filter(t => t.area < 10000);
-          break;
-      default:
-          filtered = temples; // Reset to all temples
+    case "old":
+      filtered = temples.filter(t => new Date(t.dedicated).getFullYear() < 1900);
+      break;
+    case "new":
+      filtered = temples.filter(t => new Date(t.dedicated).getFullYear() > 2000);
+      break;
+    case "large":
+      filtered = temples.filter(t => t.area > 90000);
+      break;
+    case "small":
+      filtered = temples.filter(t => t.area < 10000);
+      break;
+    default:
+      filtered = temples; // Reset to all temples
   }
   renderTemples(filtered); // Render filtered temples
 }
 
-// Add event listeners for filtering buttons
-document.getElementById("home").addEventListener("click", () => filterTemples());
-document.getElementById("old").addEventListener("click", () => filterTemples("old"));
-document.getElementById("new").addEventListener("click", () => filterTemples("new"));
-document.getElementById("large").addEventListener("click", () => filterTemples("large"));
-document.getElementById("small").addEventListener("click", () => filterTemples("small"));
+// Add event listeners for filtering buttons with error handling for missing elements
+document.getElementById("home")?.addEventListener("click", () => filterTemples());
+document.getElementById("old")?.addEventListener("click", () => filterTemples("old"));
+document.getElementById("new")?.addEventListener("click", () => filterTemples("new"));
+document.getElementById("large")?.addEventListener("click", () => filterTemples("large"));
+document.getElementById("small")?.addEventListener("click", () => filterTemples("small"));
 
 // Update footer info dynamically
-document.getElementById("current-year").textContent = new Date().getFullYear();
-document.getElementById("last-modified").textContent = `Last Modified: ${document.lastModified}`;
+document.getElementById("current-year")?.textContent = new Date().getFullYear();
+document.getElementById("last-modified")?.textContent = `Last Modified: ${document.lastModified}`;
 
 // Initial render of all temples
 renderTemples();
