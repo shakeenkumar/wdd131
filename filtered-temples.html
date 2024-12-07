@@ -15,13 +15,13 @@
     <!-- Header -->
     <header>
         <h1>Temple Photo Gallery</h1>
-        <nav>
-            <a href="#home" id="home">Home</a>
-            <a href="#about">About</a>
-            <a href="#temple-filters" id="old">Old Temples</a>
-            <a href="#temple-filters" id="new">New Temples</a>
-            <a href="#temple-filters" id="large">Large Temples</a>
-            <a href="#temple-filters" id="small">Small Temples</a>
+        <nav aria-label="Main Navigation">
+            <a href="#home" id="home" aria-label="Go to home section">Home</a>
+            <a href="#about" aria-label="Learn more about the temples">About</a>
+            <a href="#temple-filters" id="old" aria-label="View old temples">Old Temples</a>
+            <a href="#temple-filters" id="new" aria-label="View new temples">New Temples</a>
+            <a href="#temple-filters" id="large" aria-label="View large temples">Large Temples</a>
+            <a href="#temple-filters" id="small" aria-label="View small temples">Small Temples</a>
         </nav>
     </header>
 
@@ -39,5 +39,14 @@
 
     <!-- JavaScript File -->
     <script src="scripts/filtered-temples.js" defer></script>
+
+    <!-- Dynamic JavaScript for Footer -->
+    <script>
+        // Display the current year dynamically
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Display the last modified date of the document
+        document.getElementById('last-modified').textContent = `Last modified: ${document.lastModified}`;
+    </script>
 </body>
 </html>
