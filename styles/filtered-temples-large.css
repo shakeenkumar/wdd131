@@ -3,7 +3,9 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f9f9f9; /* Light gray background for better readability */
+    background-image: linear-gradient(to right, #f9f9f9, #e0e0e0); /* Subtle gradient */
+    padding: 0 20px; /* Adds some padding around the page */
     color: #333;
     line-height: 1.6;
 }
@@ -27,12 +29,22 @@ header h1 {
 /* Navigation Bar */
 nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    margin-top: 10px;
-    background-color: #444;
-    padding: 10px;
-    border-radius: 5px;
+    background-color: #333;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for emphasis */
+}
+
+#nav-menu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 #nav-menu ul {
@@ -42,19 +54,22 @@ nav {
 }
 
 #nav-menu ul li {
-    margin: 0 20px;
+    margin: 0 15px;
 }
 
 #nav-menu ul li a {
     color: white;
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 1.1em;
     text-transform: uppercase;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
+    padding: 10px 15px;
+    border-radius: 5px;
 }
 
 #nav-menu ul li a:hover {
-    color: #ff9800;
+    background-color: #ff9800;
+    color: #fff;
 }
 
 /* Temple Image Grid */
@@ -110,7 +125,7 @@ footer {
     letter-spacing: 1px;
 }
 
-/* Responsive Media Queries */
+/* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
     .temple-images {
         grid-template-columns: 1fr; /* Single column for smaller screens */
@@ -131,13 +146,28 @@ footer {
     footer {
         font-size: 1em;
     }
-}
 
-/* Background Enhancement */
-body {
-    background-color: #f9f9f9; /* Light gray background for better readability */
-    background-image: linear-gradient(to right, #f9f9f9, #e0e0e0); /* Subtle gradient */
-    padding: 0 20px; /* Adds some padding around the page */
+    #nav-menu ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #nav-menu ul li {
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    #nav-menu ul li a {
+        display: block;
+        text-align: center;
+        padding: 15px;
+        font-size: 1.2em;
+        width: 100%;
+    }
+
+    #nav-menu ul li a:hover {
+        background-color: #ff9800;
+    }
 }
 
 /* More Adjustments for Larger Screens */
