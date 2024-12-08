@@ -3,16 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Review Confirmation Page">
+    <meta name="author" content="Your Name">
     <title>Review Confirmation</title>
+    
+    <!-- Link to Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/form.css"> <!-- CSS File -->
 </head>
 <body>
-    <h1>Thank you for your review!</h1>
-    <p>Your review has been submitted successfully.</p>
-    <script>
-        let reviewCount = localStorage.getItem('reviewCount') || 0;
-        reviewCount++;
-        localStorage.setItem('reviewCount', reviewCount);
-        document.body.insertAdjacentHTML('beforeend', `<p>Total reviews: ${reviewCount}</p>`);
-    </script>
+    <div class="confirmation">
+        <h1>Thank you for your review!</h1>
+        <p>Your review has been submitted successfully.</p>
+
+        <div id="reviewCountMessage">
+            <p>Loading total reviews...</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>©2024 Rubia Magdalena Francesco 🌸 Madagascar</p>
+        <p>Last Modification: 02/26/2024 13:56:10</p>
+    </footer>
+
+    <script src="scripts/confirmation.js" defer></script>
 </body>
 </html>
