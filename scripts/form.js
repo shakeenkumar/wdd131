@@ -6,7 +6,7 @@ const products = [
     { id: "jj-1969", name: "warp equalizer", averagerating: 5.0 }
 ];
 
-const productSelect = document.getElementById("product");
+const productSelect = document.getElementById("product-name");
 products.forEach(product => {
     let option = document.createElement("option");
     option.value = product.id;
@@ -15,8 +15,7 @@ products.forEach(product => {
 });
 
 // Keeping track of the number of reviews
-let reviewCount = localStorage.getItem('reviewCount') || 0;
-reviewCount = parseInt(reviewCount);
+let reviewCount = parseInt(localStorage.getItem('reviewCount')) || 0;
 localStorage.setItem('reviewCount', reviewCount);
 
 // When the form is submitted, increment the review count
