@@ -23,3 +23,6 @@ document.getElementById("reviewForm").addEventListener("submit", function () {
     reviewCount++;
     localStorage.setItem('reviewCount', reviewCount);
 });
+// Display Last Modified Date
+const lastModifiedElement = document.getElementById("last-modified");
+lastModifiedElement.textContent = document.lastModified;
