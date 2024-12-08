@@ -23,6 +23,8 @@ document.getElementById("reviewForm").addEventListener("submit", function () {
     reviewCount++;
     localStorage.setItem('reviewCount', reviewCount);
 });
-// Display Last Modified Date
-const lastModifiedElement = document.getElementById("last-modified");
-lastModifiedElement.textContent = document.lastModified;
+// Dynamically set the copyright year in the footer
+document.getElementById("currentyear").textContent = new Date().getFullYear();
+
+// Dynamically set the last modified date in the footer
+document.getElementById("lastModified").textContent = "Last modified: " + document.lastModified;
