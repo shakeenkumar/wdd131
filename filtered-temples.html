@@ -13,16 +13,16 @@
     <header>
         <h1>Temple Photo Gallery</h1>
         <nav>
-            <a href="#" onclick="filterTemples('all')">All Temples</a>
+            <a href="#" onclick="filterTemples('all')">Home</a>
             <a href="#" onclick="filterTemples('old')">Old Temples (Before 1900)</a>
             <a href="#" onclick="filterTemples('new')">New Temples (After 2000)</a>
-            <a href="#" onclick="filterTemples('large')">Large Temples (>90k sq ft)</a>
-            <a href="#" onclick="filterTemples('small')">Small Temples (<10k sq ft)</a>
+            <a href="#" onclick="filterTemples('large')">Large Temples (>90,000 sq ft)</a>
+            <a href="#" onclick="filterTemples('small')">Small Temples (&lt;10,000 sq ft)</a>
         </nav>
     </header>
 
     <main>
-        <div class="temple-cards-container">
+        <div class="temple-cards-container" id="templeCardsContainer">
             <!-- Temple cards will be injected here by JavaScript -->
         </div>
     </main>
