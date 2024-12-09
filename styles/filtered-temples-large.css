@@ -1,131 +1,126 @@
-/* Reset some default styles */
-* {
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-/* Body Styles */
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    padding: 20px;
     background-color: #f4f4f4;
-    color: #333;
 }
 
-/* Header Styles */
 header {
     background-color: #333;
     color: white;
-    padding: 20px 20px;
+    padding: 20px;
     text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-/* Logo in the header */
-header .logo {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-header .logo img {
-    width: 50px;
-    height: auto;
-    margin-right: 10px;
 }
 
 header h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    margin: 0;
 }
 
-/* Navigation Bar Styles */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-    position: relative;
-}
-
-nav .nav-links {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-}
-
-nav .nav-links li {
-    font-size: 1.1em;
-}
-
-nav .nav-links a {
+nav a {
+    margin: 0 15px;
     color: white;
     text-decoration: none;
-    padding: 8px 15px;
-    transition: background-color 0.3s ease;
-    border-radius: 5px;
+    font-weight: bold;
 }
 
-nav .nav-links a:hover {
-    background-color: #45a049;
+nav a:hover {
+    text-decoration: underline;
 }
 
-/* Mobile Navigation Menu Toggle */
-nav .menu-toggle {
-    display: none;
-    font-size: 2em;
-    color: white;
-    cursor: pointer;
-}
-
-/* Mobile View Enhancements */
-@media screen and (max-width: 768px) {
-    nav .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        background-color: #333;
-        padding: 20px;
-        text-align: center;
-    }
-
-    nav .nav-links.active {
-        display: flex;
-    }
-
-    nav .menu-toggle {
-        display: block;
-    }
-
-    nav .nav-links li {
-        margin: 10px 0;
-    }
-
-    nav .nav-links a {
-        padding: 10px 15px;
-        font-size: 1.2em;
-    }
-}
-
-/* Footer Styles */
 footer {
+    text-align: center;
+    padding: 20px;
     background-color: #333;
     color: white;
-    text-align: center;
-    padding: 15px;
-    margin-top: 30px;
-    border-radius: 10px;
-    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
-footer p {
+.temple-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+    padding: 40px 20px;
+    margin-top: 20px;
+}
+
+.temple-card {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    width: 250px;
+    text-align: center;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.temple-card:hover {
+    transform: scale(1.05);
+}
+
+.temple-card img {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.temple-card h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.temple-card p {
+    font-size: 16px;
+    color: #666;
     margin: 5px 0;
+}
+
+/* Text Styling for Location, Date, Size */
+.temple-card .location {
+    font-style: italic;
+    color: #777;
+}
+
+.temple-card .dedication-year,
+.temple-card .area {
+    color: #555;
+    font-weight: bold;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .temple-cards-container {
+        justify-content: space-evenly;  /* Better spacing on large screens */
+    }
+    .temple-card {
+        width: 30%; /* Increase card width for wider screens */
+    }
+}
+
+@media (max-width: 1024px) {
+    .temple-cards-container {
+        justify-content: space-between;  /* More even space distribution */
+    }
+    .temple-card {
+        width: 45%; /* Adjust card width for tablet views */
+    }
+}
+
+@media (max-width: 768px) {
+    .temple-cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .temple-card {
+        width: 90%; /* Cards will take up almost full width on small screens */
+    }
 }

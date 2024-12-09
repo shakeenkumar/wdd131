@@ -1,52 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temple Photo Gallery - Explore Beautiful Temples</title>
     <meta name="description" content="Explore beautiful temples from around the world. Filter temples by location, dedication year, and size to find the one that interests you.">
     <meta name="author" content="Shakeen Kumar">
-
-    <!-- Link CSS Files -->
-    <link rel="preload" href="styles/filtered-temples.css">
-    <link rel="preload" href="styles/filtered-temples-large.css" media="(min-width: 768px)">
+    <title>Temple Photo Gallery - Explore Beautiful Temples</title>
+    <link rel="stylesheet" href="styles/filtered-temple.css">
+    <link rel="stylesheet" href="styles/filtered-temple-large.css">
 </head>
 <body>
-    <!-- Header -->
     <header>
         <h1>Temple Photo Gallery</h1>
-        <nav aria-label="Main Navigation">
-            <a href="#home" id="home" aria-label="Go to home section">Home</a>
-            <a href="#about" aria-label="Learn more about the temples">About</a>
-            <a href="#temple-filters" id="old" aria-label="View old temples">Old Temples</a>
-            <a href="#temple-filters" id="new" aria-label="View new temples">New Temples</a>
-            <a href="#temple-filters" id="large" aria-label="View large temples">Large Temples</a>
-            <a href="#temple-filters" id="small" aria-label="View small temples">Small Temples</a>
+        <nav>
+            <a href="#" onclick="filterTemples('all')">All Temples</a>
+            <a href="#" onclick="filterTemples('old')">Old Temples (Before 1900)</a>
+            <a href="#" onclick="filterTemples('new')">New Temples (After 2000)</a>
+            <a href="#" onclick="filterTemples('large')">Large Temples (>90k sq ft)</a>
+            <a href="#" onclick="filterTemples('small')">Small Temples (<10k sq ft)</a>
         </nav>
     </header>
 
-    <!-- Main Content -->
     <main>
-        <h2>Explore Our Temple Collection</h2>
-        <section id="temple-cards-container"></section>
+        <div class="temple-cards-container">
+            <!-- Temple cards will be injected here by JavaScript -->
+        </div>
     </main>
 
-    <!-- Footer -->
     <footer>
-        <p>&copy; <span id="current-year"></span>. All Rights Reserved.</p>
-        <p id="last-modified"></p>
+        <p>&copy; <span id="year"></span> Shakeen Kumar. Last modified: <span id="lastModified"></span></p>
     </footer>
 
-    <!-- JavaScript File -->
-    <script src="scripts/filtered-temples.js" defer></script>
-
-    <!-- Dynamic JavaScript for Footer -->
-    <script>
-        // Display the current year dynamically
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-
-        // Display the last modified date of the document
-        document.getElementById('last-modified').textContent = `Last modified: ${document.lastModified}`;
-    </script>
+    <script src="scripts/script.js" defer></script>
 </body>
 </html>
