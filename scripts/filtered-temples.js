@@ -66,16 +66,16 @@ function setActiveLink(filter) {
     });
 }
 
-// Update this in your filterTemples function
+// Function to filter temples based on criteria
 function filterTemples(filter) {
     let filteredTemples;
 
     switch (filter) {
         case 'old':
-            filteredTemples = temples.filter(temple => temple.dedicationYear < 1900);
+            filteredTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() < 1900);
             break;
         case 'new':
-            filteredTemples = temples.filter(temple => temple.dedicationYear > 2000);
+            filteredTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() > 2000);
             break;
         case 'large':
             filteredTemples = temples.filter(temple => temple.area > 90000);
@@ -90,15 +90,35 @@ function filterTemples(filter) {
     }
 
     displayTemples(filteredTemples);
-    setActiveLink(filter);  // Set the active link after filtering
+    setActiveLink(filter);
 }
 
+// Function to display temples on the page
+function displayTemples(temples) {
+    const container = document.getElementById('templeCardsContainer');
+    container.innerHTML = ''; // Clear current content
 
-// Initialize the page with all temples displayed
+    temples.forEach(temple => {
+        const templeCard = document.createElement('div');
+        templeCard.classList.add('temple-card');
+        
+        templeCard.innerHTML = `
+            <img src="${temple.imageUrl}" alt="${temple.templeName}">
+            <h3>${temple.templeName}</h3>
+            <p><strong>Location:</strong> ${temple.location}</p>
+            <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
+            <p><strong>Area:</strong> ${temple.area} sq ft</p>
+        `;
+        
+        container.appendChild(templeCard);
+    });
+}
+
+// Set up event listeners and display all temples on page load
 document.addEventListener('DOMContentLoaded', () => {
-    displayTemples(temples);
-
-    // Footer Date
-    document.getElementById('year').textContent = new Date().getFullYear();
+    const year = new Date().getFullYear();
+    document.getElementById('year').textContent = year;
     document.getElementById('lastModified').textContent = document.lastModified;
+
+    filterTemples('all');
 });
