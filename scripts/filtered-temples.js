@@ -54,37 +54,28 @@ const temples = [
     { templeName: "Lima Perú", location: "Lima, Perú", dedicated: "1986, January, 10", area: 9600, imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/lima-peru/400x250/lima-peru-temple-evening-1075606-wallpaper.jpg" }
 ];
 
-// Function to display the temples as cards
-function displayTemples(filteredTemples) {
-    const container = document.querySelector('.temple-cards-container');
-    container.innerHTML = ''; // Clear existing cards
-
-    filteredTemples.forEach(temple => {
-        const card = document.createElement('figure');
-        card.classList.add('temple-card');
-        card.innerHTML = `
-            <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
-            <figcaption>
-                <h3>${temple.templeName}</h3>
-                <p>Location: ${temple.location}</p>
-                <p>Dedicated: ${temple.dedicated}</p>
-                <p>Area: ${temple.area} sq ft</p>
-            </figcaption>
-        `;
-        container.appendChild(card);
+// Function to set the active link for filtering
+function setActiveLink(filter) {
+    const navLinks = document.querySelectorAll('nav a');
+    navLinks.forEach(link => {
+        if (link.getAttribute('onclick').includes(filter)) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
     });
 }
 
-// Function to filter temples
+// Update this in your filterTemples function
 function filterTemples(filter) {
     let filteredTemples;
 
     switch (filter) {
         case 'old':
-            filteredTemples = temples.filter(temple => parseInt(temple.dedicated.split(',')[0]) < 1900); // Extract the year and compare
+            filteredTemples = temples.filter(temple => temple.dedicationYear < 1900);
             break;
         case 'new':
-            filteredTemples = temples.filter(temple => parseInt(temple.dedicated.split(',')[0]) > 2000); // Extract the year and compare
+            filteredTemples = temples.filter(temple => temple.dedicationYear > 2000);
             break;
         case 'large':
             filteredTemples = temples.filter(temple => temple.area > 90000);
@@ -99,7 +90,9 @@ function filterTemples(filter) {
     }
 
     displayTemples(filteredTemples);
+    setActiveLink(filter);  // Set the active link after filtering
 }
+
 
 // Initialize the page with all temples displayed
 document.addEventListener('DOMContentLoaded', () => {
